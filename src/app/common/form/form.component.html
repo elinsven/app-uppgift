@@ -1,0 +1,12 @@
+<form [formGroup]="form" class="form" (ngSubmit)="submitForm()">
+  <div>
+    <mat-form-field>
+      <mat-label>{{ inputLabel }}</mat-label>
+      <input matInput type="text" formControlName="number">
+    </mat-form-field>
+  </div>
+
+  <div>
+    <button mat-raised-button type="submit" color="primary">Validera</button>
+  </div>
+</form>
