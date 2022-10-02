@@ -12,6 +12,7 @@ export class FormComponent implements OnInit {
   form: FormGroup;
 
   @Input() inputLabel: string;
+  @Input() testData: string;
   @Output() emitNumber = new EventEmitter<string>();
 
   constructor(private snackBar: MatSnackBar) { }
@@ -25,7 +26,7 @@ export class FormComponent implements OnInit {
   */
   initForm() {
     this.form = new FormGroup({
-      number: new FormControl("201701102384")
+      number: new FormControl(this.testData || "")
     })
   }
 
